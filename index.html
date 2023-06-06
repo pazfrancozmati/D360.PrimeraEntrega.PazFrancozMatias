@@ -5,74 +5,167 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messirve un trago</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald&display=swap" rel="stylesheet">
+    <!-Indexo link de fuente->
+
+        <link rel="shortcut icon" href="img/stars.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="css/style.css">
+        <title>Mesirve un trago</title>
 </head>
 
 <body>
-    <header>
-        <img src="/img/logoSinFondo.png" alt="Logo del sitio">
-        <!--Aca iria un buscador-->
-        <nav>
-            <a href="/empresa.html" target="_self">Empresa</a>
-            <a href="/productos.html" target="_self">Productos</a>
-            <a href=" /registro.html" target="_self">Registro</a>
-            <a href=" /miCuenta.html" target="_self">Mi cuenta</a>
-            <a href=" /contacto.html" target="_self">Contacto</a>
-        </nav>
+    <header class="contenedor">
+        <div class="columnas">
+            <div class="primerCol-logo">
+                <img src="/img/logo.png" alt="Logo del sitio">
+            </div>
+            <div class="segundaCol-botones">
+                <nav>
+                    <ul>
+                        <li><a href="/empresa.html" target="_self">Empresa</a></li>
+                        <li><a href="/productos.html" target="_self">Productos</a></li>
+                        <li><a href=" /registro.html" target="_self">Registro</a></li>
+                        <li><a href=" /miCuenta.html" target="_self">Mi cuenta</a></li>
+                        <li><a href=" /contacto.html" target="_self">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
-    <section>
-        <h1>Bienvenido a <strong>Messirve un trago</strong></h1>
-        <h2><mark>La distribuidora del campeon</mark></h2>
-        <button>Ver productos</button>
-        <!--Aca iria una galeria de imagenes que pase horizontalmente con ofertas-->
+
+    <section class="contenedor-presentacion">
+        <div class="background-presentacion">
+            <h1>Bienvenido a <strong>Mesirve un trago</strong></h1>
+            <h2>La distribuidora del campeon</h2>
+            <button>Ver productos</button>
+        </div>
     </section>
-    <hr>
-    <section>
-        <h3>Disfruta de nuestros <em>beneficios</em></h3>
-        <br>
-        <ol>
-            <li>
-                <h4>Combos</h4>
-            </li>
-            <li>
-                <h4>Ofertas</h4>
-            </li>
-            <li>
-                <h4>Compra en 6 cuotas fijas</h4>
-            </li>
-            <li>
-                <h4>Cupones de descuento</h4>
-            </li>
-        </ol>
+
+    <section class="contenedor-beneficios">
+        <div class="background-beneficios">
+            <div class="titulo-beneficios">
+                <h3>Disfruta de nuestros beneficios</h3>
+            </div>
+            <ol class="todos-beneficios">
+                <li class="beneficio">
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-store"
+                            width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#dfd395" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 21l18 0" />
+                            <path
+                                d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
+                            <path d="M5 21l0 -10.15" />
+                            <path d="M19 21l0 -10.15" />
+                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                        </svg>
+                    </div>
+                    <h4>Combos</h4>
+                </li>
+                <li class="beneficio">
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ticket" width="100"
+                            height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#dfd395" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 5l0 2" />
+                            <path d="M15 11l0 2" />
+                            <path d="M15 17l0 2" />
+                            <path
+                                d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+                        </svg>
+                    </div>
+                    <h4>Cupones de descuento</h4>
+                </li>
+                <li class="beneficio">
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-shopping-cart-discount" width="100" height="100"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#dfd395" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M17 17h-11v-14h-2" />
+                            <path d="M20 6l-1 7h-13" />
+                            <path d="M10 10l6 -6" />
+                            <path d="M10.5 4.5m-.5 0a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0" />
+                            <path d="M15.5 9.5m-.5 0a.5 .5 0 1 0 1 0a.5 .5 0 1 0 -1 0" />
+                        </svg>
+                    </div>
+                    <h4>Ofertas</h4>
+                </li>
+                <li class="beneficio">
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card"
+                            width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#dfd395" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                            <path d="M3 10l18 0" />
+                            <path d="M7 15l.01 0" />
+                            <path d="M11 15l2 0" />
+                        </svg>
+                    </div>
+                    <h4>Compra en 6 cuotas fijas</h4>
+                </li>
+            </ol>
+        </div>
     </section>
-    <hr>
-    <section>
-        <h3>Explora nuestras bebidas por categoria</h3>
-        <br>
-        <ul>
-            <li>
-                <h4>Aguardientes</h4>
-                <img src="/img/botellaVacia.jpg" alt="">
-            </li>
-            <li>
-                <h4>Licores y cremas</h4>
-                <img src="/img/botellaVacia.jpg" alt="">
-            </li>
-            <li>
-                <h4>Vinos y Fortificados</h4>
-                <img src="/img/botellaVacia.jpg" alt="">
-            </li>
-            <li>
-                <h4>Fermentados</h4>
-                <img src="/img/botellaVacia.jpg" alt="">
-            </li>
-        </ul>
+
+    <section class="contenedor-categorias">
+        <div class="background-categorias">
+            <div class="titulo-categorias">
+                <h3>Explora nuestras bebidas por categoria</h3>
+            </div>
+            <ul class="tarjetas">
+                <li class="tarjeta">
+                    <div class="contenido">
+                        <a href="#">
+                            <img src="/img/aguardientes.jpg" alt="">
+                            <h4>Aguardientes</h4>
+                        </a>
+                    </div>
+                </li>
+                <li class="tarjeta">
+                    <div class="contenido">
+                        <a href="#">
+                            <img src="/img/licores.png" alt="">
+                            <h4>Licores y cremas</h4>
+                        </a>
+                    </div>
+                </li>
+                <li class="tarjeta">
+                    <div class="contenido">
+                        <a href="#">
+                            <img src="/img/otrosVinos2.jpg" alt="">
+                            <h4>Vinos y fortificados</h4>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="tarjeta">
+                    <div class="contenido">
+                        <a href="#">
+                            <img src="/img/cerveza1.jpg" alt="">
+                            <h4>Fermentados</h4>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
     </section>
 
     <footer>
-        <h5>© Copyright 2023 - Messirve un trago</h5>
+        <h5>© Copyright 2023 - Mesirve un trago</h5>
         <h6>Desarrollado por © Matias Daniel Paz Francoz</h6>
     </footer>
-</body>
+</body> 
 
 </html>
