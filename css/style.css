@@ -109,6 +109,7 @@ body::-webkit-scrollbar-thumb:hover {
 .contenedor .columnas {
     display: flex;
     /*display para organizar contenido de las dos columnas*/
+    flex-flow: row wrap;
 }
 
 .contenedor .columnas .primerCol-logo {
@@ -116,15 +117,21 @@ body::-webkit-scrollbar-thumb:hover {
     /*ocupa el 30% de la caja que la conitiene(del 100&)*/
     display: flex;
     /*display para organizar la imagen*/
-    align-self: center;
-    /*centro el unico elemento que tengo, que es el logo*/
+    padding-top: 1%;
+    /*align-self: center;
+    centro el unico elemento que tengo, que es el logo*/
+    padding-left: 2%;
 }
 
 .contenedor .columnas .primerCol-logo img {
-    height: 13vh;
+    height: 12vh;
     /*le asigno la altura a la imagen*/
     margin: 0 auto;
     /*centro la imagen*/
+}
+
+.contenedor .columnas .button {
+    display: none;
 }
 
 /*segunda seccion, nav con botones */
@@ -450,13 +457,144 @@ footer h6 {
 }
 
 
-@media screen and (max-width:480px) {
-    /*DEJE ESTO PARA LO ULTIMO PENSANDO QUE ERA FACIL Y LA VERDAD QUE NO,
-     COMO NO ESTA EN LA CONSIGNA LO DEJO PARA LA PROXIMA ENTREGA*/
-}
 
 @media screen and (max-width:768px) {
+    .contenedor .columnas .button {
+        display: block;/*se muestra el boton de despliegue*/
+    }
 
-    /*DEJE ESTO PARA LO ULTIMO PENSANDO QUE ERA FACIL Y LA VERDAD QUE NO, 
-    COMO NO ESTA EN LA CONSIGNA LO DEJO PARA LA PROXIMA ENTREGA*/
+    .contenedor .columnas {
+        align-items: center; /*alinea los elementos de las columnas(boton de despiegue)*/
+        justify-content: space-between;/*espacio el logo y el boton de despiegue*/
+    }
+
+    .contenedor .columnas .segundaCol-botones {
+        padding: 5px;
+        width: 100%;/*ancho de 100% a la barra*/
+        
+    }
+
+    .contenedor .columnas .segundaCol-botones nav {
+        display: none;
+        /*para que aparezca y desaprezca*/
+        background-color: #9DCFF2;
+        /*color de fondo*/
+        padding-top: 10vh;
+        /*se baja un 10 % para no tapar el logo y el boton de despliegue*/
+    }
+
+    .contenedor .columnas .segundaCol-botones nav.activo {
+        /*cuando la clase activo existe*/
+        display: block;
+        /*se sobrepone a la pantalla*/
+        height: 100vh;
+        /*con un 100% de altura, ocupandola toda*/
+    }
+
+    .contenedor .columnas .segundaCol-botones ul {
+        flex-direction: column;
+        /*en una columna*/
+        align-items: center;
+        /*centrados horizontalmente*/
+        height: 50vh;
+        /*ocupan un 50 % del alto*/
+        justify-content: center;
+        /*en el medio de la pantalla */
+    }
+
+    .contenedor .columnas .button {
+        border: 3px solid var(--gold);
+        /*ancho tipo y color del borde*/
+        border-radius: 8px;
+        /*bordes redondeados*/
+        background-color: #9DCFF2;
+        /*color de fondo*/
+        margin-right: 2%;
+        /*lo alejo 2% del borde*/
+    }
+
+    /*PRESENTACION*/
+    .contenedor-presentacion .background-presentacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*alineado*/
+        justify-content: space-evenly;
+        /*separado*/
+    }
+
+    .contenedor-presentacion .background-presentacion button {
+        border: 2px solid var(--gold);
+        /*anchura, estilo y color borde*/
+        padding: 14px;
+        /*espacio alrededor texto*/
+        font-size: 1rem;
+        /*tamaño del texto*/
+        position: static;
+        /*seteo posicionamiento */
+    }
+
+    .contenedor-presentacion .background-presentacion h1 {
+        font-size: 1.8rem;
+        /*cmabio tamaño de letra*/
+        position: static;
+        /*seteo posicionamiento */
+
+    }
+
+    .contenedor-presentacion .background-presentacion h2 {
+        font-size: 1.4rem;
+        /*cmabio tamaño de letra*/
+        position: static;
+        /*seteo posicionamiento */
+
+    }
+
+    /*BENEFICIOS*/
+    .contenedor-beneficios .background-beneficios .todos-beneficios {
+        flex-flow: row wrap;
+        /*combinacionde flex direction y flex wrap(los elementos
+         usan en este caso filas adicionales)*/
+        justify-content: space-around;
+        /*disposicion de espaciado ! . . . !*/
+    }
+
+    .contenedor-beneficios .background-beneficios .todos-beneficios .beneficio .svg {
+
+        height: 6rem;
+        /*altura del circulo*/
+        width: 6rem;
+        /*anchura del circulo*/
+        border: 4px solid var(--white);
+        /*anchura, estilo y color borde*/
+    }
+
+    .contenedor-beneficios .background-beneficios .todos-beneficios .beneficio h4 {
+        font-size: .8rem;
+        /*letra mas chica que en otra resolucion*/
+    }
+
+    /*CATEGORIAS*/
+    .contenedor-categorias .background-categorias .tarjetas {
+        display: grid;
+        /*para manejar filas y columnas por cantidad y porcentaje*/
+        grid-template-columns: 1fr 1fr;
+        /*dos coumnas de 50%*/
+        grid-template-rows: 1fr 1fr;
+        /*dos filas de 50%*/
+
+
+    }
+
+    .contenedor-categorias .background-categorias .tarjetas .tarjeta {
+        height: 35vh;
+        /*todas las tarjetas tienen altura de 36 % de la pantalla*/
+
+    }
+
+    .contenedor-categorias .background-categorias .tarjetas .tarjeta .contenido a h4 {
+        font-size: .8rem;
+        /*letra mas chica que en otra resolucion*/
+    }
+
 }
